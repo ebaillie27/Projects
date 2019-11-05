@@ -98,4 +98,7 @@ public class Classes {
     public void setRep(int rep) {
         this.rep = rep;
     }
+
+    public Classes() {
+    }
 }
