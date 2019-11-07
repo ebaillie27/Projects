@@ -48,12 +48,10 @@ Table purchase as Pu {
   customer_id int [ref: > C.customer_id]
   location_id int [ref: > SL.location_id]
   order_quantity int
-  total_order currency
+  total_order money
 }
 Table purchase_detail as OD {
   purchase_detail_id int [pk]
   purchase_id int [ref: > Pu.purchase_id]
   item_id int [ref: > I.item_id]
 }
-
-Ref: "customer"."user_id" < "customer"."customer_id"
