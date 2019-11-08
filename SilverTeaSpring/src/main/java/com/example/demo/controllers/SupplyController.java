@@ -3,20 +3,19 @@ package com.example.demo.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.users;
-import com.example.demo.repository.UserRepository;
+import com.example.demo.models.supply;
+import com.example.demo.repository.SupplyRepository;
 
 @RestController
-@RequestMapping("users")
-public class UserController {
-
+@RequestMapping("supply")
+public class SupplyController {
+	
 	@Autowired
-	UserRepository UserR;
+	SupplyRepository SupplyR;
 	
 	@GetMapping("/hello")
 	public String hello() {
@@ -24,8 +23,8 @@ public class UserController {
 	}
 	
 	@GetMapping("/all")
-	public List<users> AllUsers(){
-		return UserR.findAll();
+	public List<supply> AllSupply(){
+		return SupplyR.findAll();
 	}
-	
+
 }
